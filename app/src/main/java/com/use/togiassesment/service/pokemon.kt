@@ -17,7 +17,8 @@ data class PokemonResult(
 data class PokemonDetail(
     @SerializedName("abilities") val abilities: List<Ability>,
     @SerializedName("base_experience") val baseExperience: Int,
-    @SerializedName("forms") val forms: List<Form>
+    @SerializedName("forms") val forms: List<Form>,
+    @SerializedName("sprites") val sprites: Sprites
 )
 
 data class Ability(
@@ -34,4 +35,7 @@ data class AbilityInfo(
 data class Form(
     @SerializedName("name") val name: String,
     @SerializedName("url") val url: String
+)
+data class Sprites(
+    @SerializedName("front_default") val frontDefault: String,
 )

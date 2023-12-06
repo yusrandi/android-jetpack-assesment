@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.use.togiassesment"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.use.togiassesment"
@@ -63,6 +63,7 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
 
     implementation ("com.google.code.gson:gson:2.8.8")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))

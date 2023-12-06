@@ -28,6 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.google.gson.Gson
 import com.use.togiassesment.database.DBHelper
 import com.use.togiassesment.service.Ability
@@ -76,8 +77,6 @@ fun Greeting(name: String, url: String, modifier: Modifier = Modifier) {
             modifier = modifier
         )
         Spacer(modifier = Modifier.size(16.dp))
-        Image(
-            painter = painterResource(id = R.drawable.poke),contentDescription = null, modifier = Modifier.size(100.dp))
 
         Spacer(modifier = Modifier.size(16.dp))
 
@@ -106,6 +105,12 @@ fun DisplayPokemonDetail(pokemonDetail: PokemonDetail?) {
     Column {
         when {
             pokemonDetail != null -> {
+                AsyncImage(
+                    modifier = Modifier.size(100.dp),
+                    model = pokemonDetail.sprites.frontDefault,
+                    contentDescription = "Translated description of what the image contains"
+                )
+
                 Text(text = "Base Experience: ${pokemonDetail.baseExperience}")
 
                 pokemonDetail.abilities.forEach { ability ->
