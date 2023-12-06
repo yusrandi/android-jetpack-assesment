@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TOGI Assesment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>
